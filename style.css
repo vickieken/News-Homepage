@@ -1,0 +1,363 @@
+/* VARIABLES  */
+
+:root {
+    /* screen sizes */
+    --Mobile-size: 375px;
+    --Desktop-size: 1440px;
+
+    /* primary Colors */
+    --Soft-orange: hsl(35, 77%, 62%);
+    --Soft-red: hsl(5, 85%, 63%);
+
+    /* neutral Colors */
+    --White: hsl(0, 0%, 100%);
+    --Off-white: hsl(36, 100%, 99%);
+    --Grayish-blue: rgb(196, 198, 207);
+    --Dark-grayish-blue: hsl(236, 13%, 42%);
+    --Very-dark-blue: hsl(240, 100%, 5%);
+    
+    /* Typography */
+    /* Font */
+    --Family: [Inter](https://fonts.google.com/specimen/Inter);
+    --Weights: 400, 700, 800;
+    --Font-size-inputs: 32px;
+}
+
+/* general styling */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+  
+}
+
+body {
+    font-family: var(--Family);
+    position: relative;
+}
+
+
+
+.navbar .menu-bar img 
+
+.container {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.285);
+}
+
+.navbar .logo a {
+    color: black;
+    text-decoration: none;
+}
+
+.navbar .logo a:hover {
+    color: var(--Soft-red);
+    transition: all .7s ease-in-out;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: var(--Dark-grayish-blue);
+    font-size: 14px;
+    font-family: sans-serif;
+    transition: all .8s ease-in;
+}
+
+.navbar nav ul li{
+    position: relative;
+}
+
+.navbar nav ul li a:hover {
+    color: var(--Soft-red);
+}
+
+.navbar nav ul li:hover::before{
+    visibility: visible;
+    top: 20px;
+}
+
+.navbar nav ul li::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background-color: var(--White);
+    position: absolute;
+    visibility: hidden;
+    top: -20px;
+    left: 0;
+    transition: all .8s ease-in;
+}
+
+.container #intro {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 90px;
+}
+
+.container #intro img {
+    width: 95%;
+    height: 300px;
+}
+
+.container #intro .sub-left-side {
+    display: flex;
+    width: 95%;
+    gap: 40px;
+}
+
+.container #intro .sub-left-side .btn:hover {
+    background-color: transparent;
+    border: 1px solid hsl(5, 85%, 63%);
+    color: hsl(5, 85%, 63%);
+    cursor: pointer;
+    transition: all .5s ease-in;
+}
+
+.container #intro .sub-left-side h1 {
+    width: 100%;
+    font-size: 1.8rem;
+    font-family: sans-serif;
+}
+
+.container #intro .sub-left-side button {
+    padding: 10px 20px;
+    font-size: 12px;
+    border: none;
+    background-color: var(--Soft-red);
+    color: var(--White);
+}
+
+.container #intro .right-side {
+    background-color: var(--Very-dark-blue);
+    color: var(--White);
+    padding: 5px 20px;
+    font-family: sans-serif;
+}
+
+.container #intro .right-side p {
+    color: var(--Grayish-blue);
+    font-size: 15px;
+}
+
+.container #intro .right-side h2 {
+    font-family: sans-serif;
+    color: var(--Soft-orange);
+}
+
+.container #intro .right-side ul {
+    list-style: none;
+}
+
+.container .right-side hr {
+    color: var(--Soft-orange);
+}
+
+.container #more-of .boxes {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+}
+
+.container #more-of .boxes .box {
+    width: 100%;
+    height: 190px;
+    display: flex;
+    gap: 12px;
+}
+
+.container #more-of .boxes .box h3 {
+    color: var(--Grayish-blue);
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    margin-bottom: 3px;
+    margin-top: 6px;
+}
+
+.container #more-of .boxes .box .box-details p {
+    font-family: sans-serif;
+    font-size: 14px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    color: var(--Dark-grayish-blue);
+}
+
+.container #more-of .boxes img {
+    max-height: 200px;
+    height: 160px;
+    padding: 5px 5px;
+}
+
+ .navbar input {
+    display: none;
+} 
+
+.navbar .menu-bar img {
+    width: 20px;
+    height: 20px;
+    display: none;
+}
+
+.navbar label  .close-menu {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .container {
+        height: 100vh;
+        display: flex;
+        flex-flow: column;
+        margin: 0 auto;
+    }
+    .container #more-of .boxes {
+        display: block;
+        flex-flow: row wrap;
+        justify-content: center;
+        line-height: 1.5;
+        width: 70%;
+        margin-left: 70px;
+    }
+
+    .container #intro {
+        display: block;
+        margin-bottom: 30px;
+        margin-top: 80px;
+    }
+
+    .container #intro h1 {
+        text-align: center;
+    }
+
+    .container #intro .left-side {
+        margin-bottom: 30px;
+    }
+
+    .container #intro img {
+        width: 100%;
+    }
+
+    .container #intro .sub-left-side {
+        display: block;
+        width: 95%;
+        place-content: center;
+        margin-left: 15px;
+    }
+
+    .container #intro .right-side {
+        width: 70%;
+        margin-left: 55px;
+        padding: 20px 20px;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .navbar nav ul li:hover::before{
+        visibility: visible;
+        top: 60px;
+    }
+    
+    .navbar nav ul li::before {
+        content: '';
+        width: 100%;
+        height: 20px;
+        background-color: var(--White);
+        position: absolute;
+        visibility: hidden;
+        top: 0px;
+        left: 0;
+        transition: all .8s ease-in;
+    }
+
+    .navbar label .menu-bar  .open-menu {
+        display: block;
+    }
+
+    .navbar label .menu-bar  .open-menu:hover {
+        cursor: pointer;
+    }
+
+    .navbar label  .close-menu:hover {
+        cursor: pointer;
+    }
+
+    .navbar nav ul {
+        display: flex;
+        flex-flow: column;
+        padding: 20px;
+        color: black;
+    }
+
+    .navbar nav ul li  {
+        font-weight: border;
+        font-size: 4rem;
+    }
+        
+    .navbar nav ul li a {
+        font-size: 18px;
+    }
+
+    .navbar label  .close-menu {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 30px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .navbar nav {
+        position: absolute;
+        top: -10px;
+        right: -200px;
+        width: 50%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 1s ease-in-out ;
+        transition-delay: .2s;
+    }
+
+    .navbar input:checked ~  nav {
+        position: absolute;
+            right: -15px;
+            top: -10px;
+            width: 50%;
+            height: 100vh;
+            background-color: var(--White);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.27)
+            ;
+    }
+    
+     .navbar nav input:checked ~ nav {
+        right: -200px;
+    } 
+}
+
