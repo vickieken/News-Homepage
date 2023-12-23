@@ -274,7 +274,7 @@ body {
 
 }
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .navbar nav ul li:hover::before{
         visibility: visible;
         top: 60px;
